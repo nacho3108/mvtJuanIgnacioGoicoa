@@ -11,3 +11,15 @@ def familiar(self, nombre, apellido, email, edad, anioNacimiento):
     return HttpResponse(f"""
         <p>Nombre: {familiar.nombre} - Apellido: {familiar.apellido} - Email: {familiar.email} - Edad: {familiar.edad} - Anio Nacimiento: {familiar.anioNacimiento} agregado</p>
     """)
+
+def familiares(self):
+
+    lista = Familiar.objects.all()
+
+    return render(self, "vistaFamiliar.html", {"vistaFamiliar": lista})
+
+def listaFamilia(self):
+
+    lista = Familiar.objects.all()
+
+    return render(self, "listaFamiliar.html", {"famiiar": lista})    
